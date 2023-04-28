@@ -1,0 +1,35 @@
+* {
+  box-sizing: border-box;
+}
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+button[type="submit"] {
+  background-color: #1a71f3;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+}
+button[type="submit"]:hover {
+  background-color: #00ff33;
+}
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+h1 {
+  color: #ff0000;
+}
+#success {
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 3px 3px 3px 3px;
+  color: rgb(3, 3, 3);
+  background-color: #52ff18;
+}

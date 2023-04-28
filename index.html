@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Input Validation Example</title>
+    <link rel="stylesheet" href="mystyle.css">
+  </head>
+  <body>
+    <h1>Register Form</h1>
+    <div class="container">
+      <form onsubmit="submitForm(event)">
+        <label for="name">Enter a complete name:</label>
+        <input
+          type="text"
+          id="input0"
+          name="name"
+          oninput="validateInput(this,/^([a-zA-z,/.-]+)\s([a-zA-z,/.-]+)$/)"
+          placeholder="ali dehghan"
+          required
+        />
+        <span id="nameMessage"></span>
+        <br />
+        <br />
+        <label for="email">Enter a valid email address:</label>
+        <input
+          type="text"
+          id="input1"
+          name="email"
+          oninput="validateInput(this,/^[^\s@]+@[^\s@]+\.[^\s@]+$/)"
+          placeholder="test@iran.ir"
+          required
+        />
+        <span id="emailMessage"></span>
+        <br />
+        <br />
+        <label for="phoneNumber">Enter a valid phone number:</label>
+        <input
+          type="text"
+          id="input2"
+          name="phoneNumber"
+          oninput="validateInput(this,/09(1[0-9]|3[1-9]|2[1-9])-?[0-9]{3}-?[0-9]{4}/)"
+          placeholder="0913xxxxxxx"
+          required
+        />
+        <span id="phoneNumberMessage"></span>
+        <br />
+        <br />
+        <label for="password">Enter your password:</label>
+        <input
+          type="password"
+          id="input3"
+          name="password"
+          oninput="validateInput(this,/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/)"
+          required
+        />
+        <span id="passwordMessage"></span>
+        <br />
+        <br />
+        <label for="repeatPassword">Repeat your password:</label>
+        <input
+          type="password"
+          id="input4"
+          name="repeatPassword"
+          oninput="validatePassword(this)"
+          required
+        />
+        <span id="repeatPasswordMessage"></span>
+        <br />
+        <br />
+
+        <button type="submit" id="submit" disabled>Submit</button>
+      </form>
+    </div>
+    <div id="success" style="display: none">
+      <p>Form submitted successfully!</p>
+    </div>
+    <script src="myscripts.js"></script>
+  </body>
+</html>
